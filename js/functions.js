@@ -215,3 +215,15 @@ $(window).load(function() {
 
   ga('create', 'UA-10146041-21', 'auto');
   ga('send', 'pageview');
+
+
+//Scrolldown from banner
+$("a.nav-services").click(function() {
+    $('html, body').animate({scrollTop: $("#services").offset().top}, 1000);
+  });
+
+$("a.nav-contact").click(function() {
+    $('html, body').animate({scrollTop: $("#contact").offset().top -80}, 1000);
+  });
+
+
