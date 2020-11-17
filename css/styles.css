@@ -1425,6 +1425,119 @@ table a:hover{
 	background: url(../img/social-networks-2.png) no-repeat top left; 
 }
 
+/* Set the size of the div element that contains the map */
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}
+
+// variables
+
+$language-width: 55px;
+$language-height: 30px;
+
+@mixin hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  width: 1px;
+  height: 1px;
+  border: 0;
+  margin: -1px;
+  padding: 0;
+}
+
+// language styles
+
+.hidden {
+  @include hidden;
+}
+
+.language {
+  width: $language-width * 2;
+  height: $language-height;
+  font-size: 14px;
+  /* line-height: 1; */
+  /* text-transform: uppercase; */
+}
+
+.language__th
+{
+  position: relative;
+  float: left;
+  width: $language-width;
+  height: $language-height;
+  padding: 5px;
+  left:175px;
+
+}
+.language__en {
+  position: relative;
+  float: left;
+  width: $language-width;
+  height: $language-height;
+  padding: 5px;
+  left:205px;
+}
+
+.language__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $language-width;
+  height: $language-height;
+  padding: 7px 8px 5px 25px;
+  text-align: right;
+}
+
+.language__th .language__label,
+.language__en .language__label {
+  
+  border: 1px solid #eee;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: 6px 6px;
+  
+}
+
+.language__th .language__label {
+  border-radius: 4px 0 0 4px;
+  
+
+  background-image: url(tr_flag.jpg);
+  /* background-image: url(https://cloud.githubusercontent.com/assets/858141/20550125/d04bdd40-b186-11e6-88ce-ced9edcb16ab.jpg); */
+}
+
+.language__en .language__label {
+
+  border-left: 0;
+  border-radius: 0 4px 4px 0;
+  background-image: url(en_flag.jpg);
+  /* background-image: url(https://cloud.githubusercontent.com/assets/858141/20550126/d04c0b76-b186-11e6-8a53-baadb2d2c5b1.jpg); */
+}
+
+.language__control:checked + .language__label {
+  background-color: #ddd;
+}
+
+.language__control:hover + .language__label,
+.language__control:checked:hover + .language__label {
+  background-color: #eee;
+}
+
+.language__control:focus + .language__label,
+.language__control:checked:focus + .language__label {
+  background-color: #bbb;
+}
+
+
+
+
+
+
+
 /* Normal */
 .social-network.aim{ background-position: 0 0}
 .social-network.amazon{ background-position: -24px 0}
