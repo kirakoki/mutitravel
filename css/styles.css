@@ -493,7 +493,21 @@ header {
 					position: static;
 					padding: 1.25em; /* 20 */
 					padding-top: 0;
-				}
+        }
+        @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation:landscape) 
+{
+    /* iPad landscape style here */
+}
+@media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation:portrait) 
+{
+    /* iPad portrait style here */
+}
 }
 
 /* --------------------------------------------------------	*/
